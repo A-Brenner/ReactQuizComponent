@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import QuizQuestionButton from './QuizQuestionButton';
 
 class QuizQuestion extends Component {
     constructor(props) {
@@ -6,6 +7,9 @@ class QuizQuestion extends Component {
     }
 
     render(){
+
+        const question = this.props.quiz_question;
+
         return (
             <main>
             <section>
@@ -13,10 +17,7 @@ class QuizQuestion extends Component {
             </section>
             <section className="buttons">
               <ul>
-                <li>{this.props.quiz_question.answer_options[0]}</li>
-                <li>{this.props.quiz_question.answer_options[1]}</li>
-                <li>{this.props.quiz_question.answer_options[2]}</li>
-                <li>{this.props.quiz_question.answer_options[3]}</li>
+                <QuizQuestionButton button_text={this.props.quiz_question.answer_options[0]} />
               </ul>
             </section>
           </main>
