@@ -4,6 +4,7 @@ import QuizQuestionButton from './QuizQuestionButton';
 class QuizQuestion extends Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(buttonText) {
@@ -25,7 +26,7 @@ class QuizQuestion extends Component {
                   <QuizQuestionButton 
                     key={index} 
                     button_text={answer}
-                    clickHandler={this.handleClick.bind(this)}
+                    clickHandler={this.handleClick}
                   />
                 ))}
               </ul>
